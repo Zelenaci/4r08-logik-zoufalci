@@ -23,6 +23,10 @@ class Application(tk.Tk):
                      "#dd9900 #ffffff".split()
         self.sirka = 30
         self.vyska = 20
+        
+        
+        
+        
         # skrytá pole
         self.skryteBarvy = []
         for sloupec in range(5):
@@ -51,6 +55,27 @@ class Application(tk.Tk):
 
 
 
+        #oddelovaci cara
+        c = tk.Canvas(self, backaround='#787', width=self.sirka, height=self.vyska)
+        c.grid(column=0. row=10, columnspam=5)
+        
+        
+        
+        
+        
+        #tlacitka
+        for sloupec in range(5):
+    for radek,barva in enumerate(barvy):
+        b = Button(okno, width=sirka, height=vyska,  
+                bg=barva, fg=barva, 
+                activebackground=barva,activeforeground=barva,
+                bitmap='gray' )
+        b.grid(column=sloupec, row=radek+11)
+
+Button(okno,text=u'Odeslat').grid(column=6,row=11)
+
+
+grid. 
 
 
 
@@ -89,19 +114,15 @@ class Application(tk.Tk):
         
         
         
+        aktualniRadek = 9 
+        zkouska=None
+        pokus=[None]*5
         
         
         
         
         
         
-        
-        
-        
-        
-        
-        
-
 
 app = Application()
 app.mainloop()
